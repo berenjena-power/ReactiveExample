@@ -18,6 +18,7 @@
 		F2BE1CAE1F825679000E08B4 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2BE1CA91F825678000E08B4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2BE1CAF1F825679000E08B4 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BE1CAA1F825679000E08B4 /* ReactiveCocoa.framework */; };
 		F2BE1CB01F825679000E08B4 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2BE1CAA1F825679000E08B4 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2BE1CB21F8258AD000E08B4 /* ReactiveClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE1CB11F8258AD000E08B4 /* ReactiveClock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		F2BE1CA81F825678000E08B4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = ../Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		F2BE1CA91F825678000E08B4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		F2BE1CAA1F825679000E08B4 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = ../Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		F2BE1CB11F8258AD000E08B4 /* ReactiveClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveClock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				F23B7A491F82550D008F8AD5 /* Assets.xcassets */,
 				F23B7A4B1F82550D008F8AD5 /* LaunchScreen.storyboard */,
 				F23B7A4E1F82550D008F8AD5 /* Info.plist */,
+				F2BE1CB11F8258AD000E08B4 /* ReactiveClock.swift */,
 			);
 			path = ReactiveExample;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2BE1CB21F8258AD000E08B4 /* ReactiveClock.swift in Sources */,
 				F23B7A451F82550D008F8AD5 /* ViewController.swift in Sources */,
 				F23B7A431F82550D008F8AD5 /* AppDelegate.swift in Sources */,
 			);
