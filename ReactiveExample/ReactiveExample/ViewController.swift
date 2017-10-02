@@ -1,18 +1,19 @@
-//
-//  ViewController.swift
-//  ReactiveExample
-//
-//  Created by Sebastián Varela on 2/10/17.
-//  Copyright © 2017 Berenjena-Power. All rights reserved.
-//
-
 import UIKit
+import ReactiveSwift
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    let clock = ReactiveClock()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        clock.signal
+            .observe(on: UIScheduler())
+            .observeValues { value in
+                self.label.text = "\(value)"
+            }
     }
 
     override func didReceiveMemoryWarning() {

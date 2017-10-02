@@ -3,15 +3,21 @@ import ReactiveSwift
 import Result
 
 public class ReactiveClock {
+    
     let signal: Signal<Int, NoError>
     private let observer: Signal<Int, NoError>.Observer
+    private var currentValue: Int = 0
+    private var timer: Timer? = nil
     
     init() {
         (signal, observer) = Signal<Int, NoError>.pipe()
         
-        let timer = Timer(timeInterval: 1000, repeats: true) { timer in
-            self.observer.send(value: 1)
-        }
-        timer.fire()
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    }
+    
+    @objc
+    func update() {
+        currentValue += 1
+        observer.send(value: currentValue)
     }
 }
